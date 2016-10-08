@@ -9,9 +9,18 @@ object Hello {
 
       return rem
     }
+
+    def makeAVector(input:Int): Vector[Int] ={
+      val v = scala.collection.immutable.Vector.empty
+      val newVec = v ++ List(input, input + 7)
+      return (newVec)
+    }
     val nums: List[Int] = List(1,2,3,4,5,6,7,8,9,10)
-    
-  print(mod3(nums))
+
+    println(mod3(nums))
+    var test = (x:List[Int]) => for(x <- nums) yield x % 5
+    println("Test is: " + test(nums))
+    println("Vec: " + makeAVector(1))
   }
 
 }
